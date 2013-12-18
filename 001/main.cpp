@@ -11,7 +11,8 @@ MYSQL * conn;
 int main()
 {
 	mysql_init(&mysql);
-	
+
+	//connect to mySQL database
 	conn = mysql_real_connect (&mysql, HOST, USER, PASS, DB, PORT, 0, 0); 
 
 	if (conn == NULL)
