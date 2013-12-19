@@ -38,6 +38,7 @@ class mysql_database
 		int			intQuery		(char *query);	//return integer
 		bool		boolQuery		(char *query);	//return boolean
 		bool		updateQuery		(char *query);	//updates, returns true if update went through
+		int			outputQuery		(char *query);
 
 		//free the query results
 		bool free();

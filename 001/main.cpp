@@ -32,7 +32,7 @@ int main()
 
 
 	mysql_database database;
-	char query[] = "SELECT surename FROM test";
+	char query[] = "SELECT * FROM test";
 	char *result = NULL;
 
 	cout << dberror(database.openConnection(HOST, USER, PASS, DB));
@@ -40,7 +40,10 @@ int main()
 
 	result = database.stringQuery(query);
 
+	database.outputQuery(query);
 	database.disconnect();
+
+	system("pause");
 
 	return 0;
 }
