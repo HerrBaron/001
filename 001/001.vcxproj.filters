@@ -18,9 +18,15 @@
     <ClCompile Include="main.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="class_mysql_database.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="db_credentials.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="db_mysql_database_class.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

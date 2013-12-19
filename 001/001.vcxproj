@@ -85,9 +85,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="class_mysql_database.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="db_credentials.h" />
+    <ClInclude Include="db_mysql_database_class.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

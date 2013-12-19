@@ -4,29 +4,43 @@
 #include <mysql.h> 
 
 #include "db_credentials.h"
+#include "db_mysql_database_class.h"
 using namespace std;
-MYSQL mysql;
-MYSQL * conn;
 
 int main()
 {
-	mysql_init(&mysql);
+	//MYSQL mysql;
+	//MYSQL * conn;
+	//
+	//mysql_init(&mysql);
 
-	//connect to mySQL database
-	conn = mysql_real_connect (&mysql, HOST, USER, PASS, DB, PORT, 0, 0); 
+	////connect to mySQL database
+	//conn = mysql_real_connect (&mysql, HOST, USER, PASS, DB, PORT, 0, 0); 
 
-	if (conn == NULL)
-	{
-		cout << "Keine Verbindung zur Datenbank" << endl;
-	}
-	else
-	{
-		cout << "Erfolgreich verbunden" << endl;
-	}
+	//if (conn == NULL)
+	//{
+	//	cout << "Keine Verbindung zur Datenbank" << endl;
+	//}
+	//else
+	//{
+	//	cout << "Erfolgreich verbunden" << endl;
+	//}
 
-	system("pause");
+	//system("pause");
 
-	mysql_close(conn);
-	
+	//mysql_close(conn);
+
+
+	mysql_database database;
+	char query[] = "SELECT surename FROM test";
+	char *result = NULL;
+
+	cout << dberror(database.openConnection(HOST, USER, PASS, DB));
+	cout << endl;
+
+	result = database.stringQuery(query);
+
+	database.disconnect();
+
 	return 0;
 }
